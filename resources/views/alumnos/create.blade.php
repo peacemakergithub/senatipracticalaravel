@@ -3,6 +3,10 @@
         <form method="POST" action="{{ route('alumnos.store') }}">
             @csrf
             <div class="form-group">
+                <label for="nombres">Dni</label>
+                <input type="text" class="form-control" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
                 <label for="nombres">Nombres</label>
                 <input type="text" class="form-control" id="nombres" name="nombres" required>
             </div>

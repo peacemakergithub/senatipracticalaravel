@@ -5,6 +5,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Dni</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Acciones</th>
@@ -14,6 +15,7 @@
             @foreach($alumnos as $alumno)
             <tr>
                 <td>{{ $alumno->id }}</td>
+                <td>{{ $alumno->dni }}</td>
                 <td>{{ $alumno->nombres }}</td>
                 <td>{{ $alumno->apellidos }}</td>
                 <td>

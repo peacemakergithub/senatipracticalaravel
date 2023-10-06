@@ -29,6 +29,12 @@ Route::get('/', function () {
     Route::resource('alumnos', AlumnoController::class);
 */
 
+/*
+Route::get('alumnos', function () {
+    return app()->make('App\Http\Controllers\AlumnoController')->index();
+})->name("alumnos.index");
+*/
+
 Route::get('alumnos', [AlumnoController::class, 'index'])->name("alumnos.index");
 Route::get('alumnos/create', [AlumnoController::class, 'create'])->name("alumnos.create");
 Route::post('alumnos', [AlumnoController::class, 'store'])->name('alumnos.store');

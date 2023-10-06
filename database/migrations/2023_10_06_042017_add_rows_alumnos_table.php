@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         DB::table('alumnos')->insert([
+            'dni'=>'40633367',
             'nombres' => 'Juan',
-            'apellidos' => 'Pérez',
+            'apellidos' => 'Perez',
         ]);
     }
 
@@ -22,6 +23,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        DB::table('alumnos')->where('nombres', 'Juan')->delete();
+        DB::table('alumnos')
+        ->where('dni', '40633367')
+        ->where('nombres', 'Juan')
+        ->where('apellidos', 'Perez')
+        ->delete();
     }
 };

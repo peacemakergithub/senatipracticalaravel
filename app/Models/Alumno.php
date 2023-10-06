@@ -9,5 +9,5 @@ class Alumno extends Model
 {
     use HasFactory;
     protected $table = 'alumnos'; // Nombre de la tabla en la base de datos
-    protected $fillable = ['nombres', 'apellidos'];
+    protected $fillable = ['nombres', 'apellidos','dni'];
 }

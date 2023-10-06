@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alumno;
+use Illuminate\Database\QueryException;
 
 class AlumnoController extends Controller
 {
@@ -26,11 +27,30 @@ class AlumnoController extends Controller
         $request->validate([
             'nombres' => 'required',
             'apellidos' => 'required',
+            'dni' => 'required',
         ]);
+        try{
+            Alumno::create($request->all());
 
-        Alumno::create($request->all());
+            return redirect()->route('alumnos.index');
 
-        return redirect()->route('alumnos.index');
+        }catch(QueryException $e){
+            $errorCode = $e->getCode();
+           
+            if ($errorCode === '23000') {
+
+                //return "El registro tiene un campo duplicado <br>".$e->getMessage();
+                return "El registro tiene un campo duplicado";
+            }
+            else if ($errorCode === '22001') {
+
+                //return "El registro tiene un campo duplicado <br>".$e->getMessage();
+                return "El registro tiene un campo mas grande de lo esperado";
+            }
+            else{
+                throw $e;
+            }
+        }
     }
     public function edit($id)
     {
@@ -42,13 +62,34 @@ class AlumnoController extends Controller
         $request->validate([
             'nombres' => 'required',
             'apellidos' => 'required',
+            'dni' => 'required',
         ]);
     
         $alumno = Alumno::findOrFail($id);
-        $alumno->update([
-            'nombres' => $request->nombres,
-            'apellidos' => $request->apellidos,
-        ]);
+        
+        try{
+            $alumno->update([
+                'nombres' => $request->nombres,
+                'apellidos' => $request->apellidos,
+                'dni' => $request->dni,
+            ]);
+        }catch(QueryException $e){
+        $errorCode = $e->getCode();
+        
+        if ($errorCode === '23000') {
+
+            //return "El registro tiene un campo duplicado <br>".$e->getMessage();
+            return "El registro tiene un campo duplicado";
+        }
+        else if ($errorCode === '22001') {
+
+            //return "El registro tiene un campo duplicado <br>".$e->getMessage();
+            return "El registro tiene un campo mas grande de lo esperado";
+        }
+        else{
+            throw $e;
+        }
+    }
 
         return redirect()->route('alumnos.index');
     }

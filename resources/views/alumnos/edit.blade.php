@@ -4,6 +4,10 @@
             @csrf
             @method('PUT') <!-- Utiliza PUT para la actualización -->
             <div class="form-group">
+                <label for="nombres">Dni</label>
+                <input type="text" class="form-control" id="dni" name="dni" value="{{ $alumno->dni }}" required>
+            </div>
+            <div class="form-group">
                 <label for="nombres">Nombres</label>
                 <input type="text" class="form-control" id="nombres" name="nombres" value="{{ $alumno->nombres }}" required>
             </div>
