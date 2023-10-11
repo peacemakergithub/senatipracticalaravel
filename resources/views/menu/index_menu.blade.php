@@ -60,6 +60,12 @@
         .image {
             max-width: 100%;
         }
+        .imagen-de-fondo {
+           width: 300px; /* Define el ancho que desees */
+           height: 200px; /* Define la altura que desees */
+           background-image: url('IMAGEN.png');
+            /* Ajusta la imagen para que cubra todo el div */
+}
     </style>
 </head>
 <body>
@@ -74,9 +80,7 @@
     <div class="content">
         <h1>Bienvenido al Sistema de Control</h1>
         <h2>Senati</h2>
-        <div class="image-container">
-            <img class="image" src="SENATI.JPG" alt="Imagen">
-        </div>
+        <div class="imagen-de-fondo"></div>
     </div>
 </body>
 </html>

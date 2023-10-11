@@ -53,12 +53,29 @@
         .btn:hover {
         background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
     }
+    .corner-button {
+            position: absolute;
+            top: 10px; /* Ajusta la posición vertical según tu preferencia */
+            right: 10px; /* Ajusta la posición horizontal según tu preferencia */
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h2>Listado de Cursos</h2>
+        <a href="/menu"class="corner-button">Volver al Menú</a>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
