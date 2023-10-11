@@ -95,9 +95,20 @@ class AlumnoController extends Controller
     }
     public function destroy($id)
     {
-        $alumno = Alumno::findOrFail($id);
-        $alumno->delete();
-
+        try {
+            $alumno = Alumno::findOrFail($id);
+            $alumno->delete();
+        } catch (QueryException $e) {
+            $errorCode = $e->errorInfo[1];
+    
+            if ($errorCode === 1451) {
+                return "No se puede eliminar este alumno debido a restricciones de clave foránea.";
+            } else {
+                throw $e;
+            }
+        }
+    
         return redirect()->route('alumnos.index');
     }
-}
+    }
+    
