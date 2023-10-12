@@ -9,7 +9,7 @@ class curso extends Model
 {
     use HasFactory;
 
-    protected $table = 'cursos'; // Nombre de la tabla en la base de datos
+    protected $table = 'cursos'; // 
     protected $fillable = ['nombre', 'descripcion', 'duracion_horas', 'fecha_inicio', 'nivel', 'precio', 'idioma'];
 }
 

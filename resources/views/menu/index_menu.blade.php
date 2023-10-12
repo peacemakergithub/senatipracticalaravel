@@ -10,6 +10,7 @@
             padding: 0;
             background-color: #ffe4b5; /* Fondo azul */
             font-family: Arial, sans-serif;
+            background-image:url(IMAGEN.png);
         }
 
         header {
@@ -60,16 +61,11 @@
         .image {
             max-width: 100%;
         }
-        .imagen-de-fondo {
-           width: 300px; /* Define el ancho que desees */
-           height: 200px; /* Define la altura que desees */
-           background-image: url('IMAGEN.png');
-            /* Ajusta la imagen para que cubra todo el div */
-}
     </style>
 </head>
 <body>
     <header>
+        
         <ul class="nav-links">
             <li><a href="{{ route('alumnos.index') }}">Alumnos</a></li>
             <li><a href="{{ route('instructores.index') }}">Instructores</a></li>
@@ -80,7 +76,8 @@
     <div class="content">
         <h1>Bienvenido al Sistema de Control</h1>
         <h2>Senati</h2>
-        <div class="imagen-de-fondo"></div>
+        <img src="IMAGEN.png" alt="IMAGEN ">
+        
     </div>
 </body>
 </html>
