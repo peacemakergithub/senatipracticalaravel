@@ -1,56 +1,9 @@
-<style>
-    .container {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f5f5f5;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    label {
-        font-weight: bold;
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    select.form-control {
-        width: 100%;
-    }
-
-    .btn {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        margin: 0 auto;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        background-color: #45a049;
-    }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Instructor</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/instructor/editarinstructor.css') }}"></head>
 <div class="container"> <h2>Editar instructor</h2> <form method="POST"
     action="{{ route('instructores.update', $instructor->id) }}">
     @csrf
@@ -80,3 +33,4 @@
     <button type="submit" class="btn btn-primary">Guardar cambios</button>
     </form>
 </div>
+</html>

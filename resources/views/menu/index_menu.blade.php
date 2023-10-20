@@ -1,67 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffe4b5; /* Fondo azul */
-            font-family: Arial, sans-serif;
-            background-image:url(IMAGEN.png);
-        }
-
-        header {
-            background-color: #2980b9; /* Encabezado con color azul más oscuro */
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .nav-links {
-            list-style: none;
-            padding: 10px;
-        }
-
-        .nav-links li {
-            display: inline;
-            margin-right: 80px;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            color: mistyrose;
-        }
-
-        .nav-links li a:hover {
-            color: #ecf0f1; /* Cambia el color al pasar el mouse */
-        }
-
-        .content {
-            text-align: center;
-            color: sienna;
-            padding: 150px 0;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin: 10px 0;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-
-        .image-container {
-            text-align: center;
-        }
-
-        .image {
-            max-width: 100%;
-        }
-    </style>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/menu.css') }}"></head>
+    <title>Inicio</title>  
 </head>
 <body>
     <header>
@@ -76,8 +19,9 @@
     <div class="content">
         <h1>Bienvenido al Sistema de Control</h1>
         <h2>Senati</h2>
-        <img src="IMAGEN.png" alt="IMAGEN ">
-        
     </div>
+    <div class="image-container">
+    <img src="/imagenes/senati.png" alt="Descripción de la imagen" class="image">
+</div>
 </body>
 </html>

@@ -1,73 +1,10 @@
-<style>
-     body {
-            background-color: #e0f2f1; /* Color azul claro */
-        }
-    /* Estilos para la tabla */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background-color: #e0f2f1; /* Fondo azul claro */
-        border: 2px solid #4CAF50; /* Borde verde */
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #4CAF50; /* Fondo verde para encabezados */
-        color: white; /* Texto blanco para encabezados */
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2; /* Fondo gris claro para filas pares */
-    }
-
-    /* Estilos para los botones */
-    .btn {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s; /* Transición al pasar el mouse */
-    }
-
-    .btn-danger {
-        background-color: #f44336;
-    }
-
-    .btn-success {
-        background-color: #4CAF50;
-    }
-
-    .btn:hover {
-        background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
-    }
-    .corner-button {
-            position: absolute;
-            top: 10px; /* Ajusta la posición vertical según tu preferencia */
-            right: 10px; /* Ajusta la posición horizontal según tu preferencia */
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-</style>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario alumnos</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/formularioalumnos.css') }}">
+</head>
 <div class="container">
     <h2>Listado de Alumnos</h2>
     <a href="/menu"class="corner-button">Volver al Menú</a>
@@ -111,3 +48,4 @@
     </table>
     <a href="{{ route('alumnos.create') }}" class="btn btn-success">Agregar</a>
 </div>
+</html>

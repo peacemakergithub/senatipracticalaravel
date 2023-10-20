@@ -1,84 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIr6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-    
-    <style>
-        /* Estilo de fondo para toda la página */
-        body {
-            background-color: #e0f2f1; /* Color azul claro */
-        }
-
-        /* Estilos para la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #e0f2f1; /* Fondo azul claro */
-            border: 2px solid #8e44ad; /* Borde verde */
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #8e44ad; /* Fondo verde para encabezados */
-            color: white; /* Texto blanco para encabezados */
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2; /* Fondo gris claro para filas pares */
-        }
-
-        /* Estilos para los botones */
-        .btn {
-            background-color: #8e44ad;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Transición al pasar el mouse */
-        }
-
-        .btn-danger {
-            background-color: #f44336;
-        }
-
-        .btn-success {
-            background-color:#8e44ad;
-        }
-
-        .btn:hover {
-            background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
-        }
-        .corner-button {
-            position: absolute;
-            top: 10px; /* Ajusta la posición vertical según tu preferencia */
-            right: 10px; /* Ajusta la posición horizontal según tu preferencia */
-            background-color: #8e44ad;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-    </style>
-</head>
+    <meta charset="UTF-8">
+    <title>formulario Instructor </title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/instructor/formularioinstructor.css') }}"></head>
 <body>
     <div class="container">
  

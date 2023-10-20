@@ -1,76 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <style>
-        /* Estilo de fondo para toda la página */
-        body {
-            background-color: #e0f2f1;
-            /* Color azul claro */
-        }
-
-        /* Estilos para la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #e0f2f1;/* Fondo azul claro */
-            border: 2px solid #3498db;/* Borde verde */
-        }
-
-        th,td {
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #3498db; /* Fondo verde para encabezados */
-            color: white; /* Texto blanco para encabezados */
-        }
-
-        /* Estilos para los botones */
-        .btn {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Transición al pasar el mouse */
-        }
-
-        .btn-danger {
-            background-color: #f44336;
-        }
-
-        .btn-success {
-            background-color: #3498db;
-        }
-        .btn:hover {
-        background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
-    }
-    .corner-button {
-            position: absolute;
-            top: 10px; /* Ajusta la posición vertical según tu preferencia */
-            right: 10px; /* Ajusta la posición horizontal según tu preferencia */
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-    </style>
-</head>
-
+    <meta charset="UTF-8">
+    <title>Formulario Curso</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/cursos/formulario.cursos.css') }}"></head>
 <body>
     <div class="container">
         <h2>Listado de Cursos</h2>
@@ -117,5 +50,4 @@
         <a href="{{ route('cursos.create') }}" class="btn btn-success">Agregar Curso</a>
     </div>
 </body>
-
 </html>
